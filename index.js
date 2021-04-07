@@ -23,10 +23,6 @@ const client = new tmi.client(options);
 
 client.connect();
 
-client.on('connected', (address, port) => {
-    client.action(channelName, ', reporting for duty.')
-});
-
 client.on("subscription", function (channel, username, methods ) {
     client.say(channel, username + ' just subbed to the Eskiiimo fam!' )
 });
