@@ -51,7 +51,7 @@ client.on('chat', (channel, user, message, self) => {
 
     try {
         let commandFile = require(`./commands/${cmd}.js`)
-        commandFile.execute(client, message, args, user, channel, self)
+        commandFile.execute(client, message, args, tags, user, channel, self)
     } catch (err) {
         return;
     } 

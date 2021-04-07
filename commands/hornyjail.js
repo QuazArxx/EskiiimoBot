@@ -1,7 +1,7 @@
 module.exports = {
     name: 'hornyjail',
     descriptions: 'Sends someone to horny jail',
-    execute(client, message, args, user, channel, self) {
+    execute(client, message, args, tags, user, channel, self) {
         let param = message.split(' ').filter(n => n);
 
         if(param[1] == 'all') {
