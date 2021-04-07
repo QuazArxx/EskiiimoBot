@@ -2,6 +2,8 @@ const tmi = require('tmi.js');
 const channelName = 'eskiiimojo';
 const { prefix, token } = require('./config.json');
 
+let used = false;
+
 const options = {
     options: {
         debug: true,
@@ -39,7 +41,13 @@ client.on('chat', (channel, user, message, self) => {
     if (self) return;
 
     if (message.toLowerCase() == 'f') {
-        client.say(channel, 'F')
+        if (!used) {
+            client.say(channel, 'F');
+            used = true;
+            setTimeout(function () {
+                used = false;
+            }, 20000);
+        } else return;
     }
 
     const args = message.slice(prefix.length).trim().split(' ');
