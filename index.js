@@ -33,7 +33,7 @@ client.on("resub", function (channel, username, months, message, userstate, meth
     client.say(channel, username + " resubbed for " + cumulativeMonths + " months!" )
 });
 
-client.on('chat', (channel, tags, user, message, self) => {
+client.on('chat', (channel, user, message, self) => {
     if (self) return;
 
     if (message.toLowerCase() == 'f') {
