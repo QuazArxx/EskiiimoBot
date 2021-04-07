@@ -1,6 +1,6 @@
 const tmi = require('tmi.js');
 const channelName = 'eskiiimojo';
-const prefix = '!';
+const { prefix, token } = require('./config.json');
 
 const options = {
     options: {
@@ -12,7 +12,7 @@ const options = {
     },
     identity: {
         username: 'EskiiimoBot',
-        password: 'oauth:dpdpe4231b87i70rvfq7gtgbp3ag1e'
+        password: token
     },
     channels: [channelName],
 };
