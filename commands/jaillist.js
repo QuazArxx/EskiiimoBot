@@ -1,6 +1,6 @@
 const functions = require('../functions.js');
 
-modules.exports = {
+module.exports = {
     name: 'jaillist',
     description: 'Lists everyone in horny jail',
     execute(client, message, args, user, channel, self) {
