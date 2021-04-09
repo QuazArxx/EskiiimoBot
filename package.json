@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "tmi.js": "^1.5.0",
+    "tmi.js": "^1.7.5",
     "twitch": "^4.0.10",
     "twitch-chat-client": "^4.0.10"
   },
