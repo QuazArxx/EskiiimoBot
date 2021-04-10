@@ -38,8 +38,11 @@ client.on('chat', (channel, user, message, self) => {
 
     if (message.toLowerCase() == 'f') {
         if (!used) {
-            client.say(channel, 'F');
-            used = true;
+            setTimeout(function () {
+                client.say(channel, 'F');
+                used = true;
+            }, 2000);
+            
             setTimeout(function () {
                 used = false;
             }, 20000);
